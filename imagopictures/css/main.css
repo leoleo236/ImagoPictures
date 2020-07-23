@@ -1,0 +1,263 @@
+/* 	Feuille de style responsive 
+	du site vitrine ImagoPictures */
+
+/*	Police d'écriture du site	*/
+@font-face {
+    font-family: "harvestital";
+    src: url(../application/www/fonts/harvestital.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* 	STYLE GENERAL
+	identique à chaque même éléments,
+	de chaque section du site vitrine*/
+html {
+	scroll-behavior: smooth;
+	width: 100%;
+	background-color: white;	
+	font: 80% harvestital, sans-serif;
+	
+}
+
+h2, main p{
+	color: #F2F2F2;
+	text-shadow: 7px 7px 15px #000000, 
+				 -7px 7px 15px #000000,
+				 7px -7px 15px #000000,
+				 -7px -7px 15px #000000;
+}
+h2{
+ 	margin: 0;
+ 	padding: 3rem;
+ 	text-align: center;
+	font-size: 3.5rem;
+}
+main p{
+	margin: 2rem;
+	font-weight: lighter;
+	font-size: 1rem;
+	text-align: center;
+}
+
+
+/*	Style des différentes sections
+	(placement des contenus et 
+	tailles des sections) 	*/
+header, #trois, #clip, #contact, #vfx{
+	margin: 0 auto;
+}
+header, #trois{
+    height: 55rem;
+}
+#clip, #contact{
+    height: 60rem;
+}
+
+
+/*	Style commun aux 
+	Intros des différentes Sections  */
+.clipintro, .vfxintro, .intro3d, #contactintro{
+	width:90%;
+	margin:0 auto;
+	text-shadow: 
+}
+
+
+/*  HEADER 
+	(Acceuil du site vitrine).	*/
+
+/*	Titre 	*/
+.title{
+  padding:0.5rem;
+  height:25rem;
+  color: transparent;
+  background: url("https://static.wixstatic.com/media/6ff458_e4bf2d62178f492dbc651357f50d5cc6.jpg/v1/fill/w_1084,h_667,al_c,q_90,usm_0.66_1.00_0.01/6ff458_e4bf2d62178f492dbc651357f50d5cc6.webp"), black 
+  center 0 repeat fixed;
+  -webkit-background-clip: text;
+  position:relative;
+  text-align:center;
+  font-size:4.5rem;
+  font-weight: 1000;
+  line-height:4.8rem;
+  letter-spacing:-0.2rem;
+}
+.title span{
+	font-size:6rem;
+}
+.title:hover{
+	text-shadow: 10px 10px 150px white;
+}
+
+/*	Navigateur	*/
+nav{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+nav a{
+	text-decoration: none;
+	font-size: 2rem;
+	color: black;
+	text-align: center;
+}
+
+
+/*	SECTION CLIP */
+
+
+/*	SECTION 3D*/
+
+/* Vidéo de présentation*/
+.intro3d iframe{
+	width: 100%;
+	margin: 2rem auto 4rem;
+}
+
+
+
+/*	SECTION VFX	*/
+#vfx{
+	height: 75rem;
+}
+/*	Placement de vfximage.
+	Changement d'image au passage de la souris	*/
+.vfximage{
+	width:80%;
+	margin: 2rem auto;
+}
+.vfximage img{
+	width:100%;
+}
+.vfximage:hover #img1{
+	display:none;
+}
+#img2{
+	display:none;
+}
+.vfximage:hover #img2{
+	display:block;
+}
+
+/* 	SECTION CONTACT	*/
+#contactintro, #contacticon{
+	display:flex;
+	justify-content: space-around;
+	margin: 2rem auto 4rem;
+	text-align: center;
+}
+#contacticon img{
+	width:4rem;
+}
+
+
+/*	FOOTER 	*/
+footer{
+	width: 100%;
+	text-align: center;
+}
+
+
+
+
+/*	 Responsive format tablette		*/
+@media screen and (min-width:700px) {
+	html{
+		font-size:100%;
+	}
+	header, #clip, #vfx, #trois {
+	height: 65rem;
+	}
+	.title{
+		margin-bottom: 10rem;
+		font-size:6rem;
+	}
+	.clipcontent {
+		margin: 10rem auto
+	}
+	.vfximage{
+		width:60%;
+	}
+	.intro3d iframe{
+		height: 20rem;
+	}
+	#contact {
+		height:60rem;
+	}
+	#contact img{
+		width:6rem;
+		margin: 3rem;
+	}
+
+
+}
+
+
+/*	Responsive format pc 	*/
+@media screen and (min-width:1024px) {
+	h2{
+		font-size: 5rem;
+	}
+	main p{
+		width: 80%;
+		font-size: 1.5rem;
+		margin: 0 auto;
+	}
+	#clip p, #vfx p{
+		text-align: left;
+	} 
+
+
+	header{
+		height: 50rem;
+	}
+	#vfx, #trois{
+		height:70rem;
+	}
+	
+	.title{
+		height:30rem;
+		font-size:9rem;
+		margin-bottom: 5rem;
+		
+	}
+	nav{
+		justify-content: space-around;
+		flex-direction: row;
+	}
+
+	.vfxintro{
+		width: 50%;
+		position: absolute;
+		left: 0;
+	}
+	.vfximage{
+		width: 40%;
+		position: relative;
+		left: 20rem;
+		top: 5rem;
+	}
+	.vfxslider {
+		position: relative;
+		top: 15rem;
+	}
+	.intro3d iframe{
+		height: 25rem;
+	}
+	#contactintro{
+		width:50%;
+	} 
+	#contacticon{
+		display: block;
+	}
+	#contact img{
+		margin:1rem;
+	}
+}
